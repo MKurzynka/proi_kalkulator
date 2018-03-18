@@ -4,6 +4,7 @@
 #include "Operators.h"
 #include <iostream>
 #include <cstdlib>
+#include <limits>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ Menu::Menu(){operator_input = '+'; first_value = 0; second_value = 0;}
         do{
         cout << "Zdefiniuj operacje (+, -, *, /) lub wprowadz q, aby wyjsc" << endl;
         cin >> provided_operator;
-        cin.ignore(INT_MAX, '\n');
+        cin.ignore(INT32_MAX, '\n');
         cin.clear();
         if(provided_operator == 'q')
         {
